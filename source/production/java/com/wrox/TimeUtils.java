@@ -1,4 +1,4 @@
-package com.wrox.tag;
+package com.wrox;
 
 /**
  * Created by EKAC on 15.10.2017 г..

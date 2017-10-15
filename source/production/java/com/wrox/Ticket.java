@@ -1,5 +1,6 @@
 package com.wrox;
 
+import java.time.OffsetDateTime;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -13,6 +14,16 @@ public class Ticket
     private String body;
 
     private Map<String, Attachment> attachments = new LinkedHashMap<>();
+
+    private OffsetDateTime dateCreated;
+
+    public OffsetDateTime getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(OffsetDateTime dateCreated) {
+        this.dateCreated = dateCreated;
+    }
 
     public String getCustomerName()
     {
