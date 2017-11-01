@@ -34,11 +34,6 @@ public class TicketServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // checks if a user is logged in or not
-        if (request.getSession().getAttribute("username") == null) {
-            response.sendRedirect("login");
-            return;
-        }
 
         String action = request.getParameter("action");
         if (action == null)
@@ -142,7 +137,6 @@ public class TicketServlet extends HttpServlet {
             throws ServletException, IOException {
         // adding attributes to a request (not params)
         request.setAttribute("ticketDatabase", this.ticketDatabase);
-        request.setAttribute("edorsAttribute", "sampleAttribute");
 
         // forwarding the request to a jsp to handle (not redirecting it)
         request.getRequestDispatcher("/WEB-INF/jsp/view/listTickets.jsp")
